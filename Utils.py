@@ -1,7 +1,11 @@
 import math
 
 def get_non_negative_integer(prompt: str) -> int:
-    """Validates User Input"""
+    """
+    Validates User Input
+    :param prompt: Prompt to Display to User
+    :return: Integer Input
+    """
     while True:
         user_input = input(prompt).strip()
 
@@ -11,7 +15,12 @@ def get_non_negative_integer(prompt: str) -> int:
         print("Invalid Input - Enter a While Number 0 or Greater")
 
 def calculate_wait_time(needed_resources: dict, production_rates: dict) -> float:
-    """Calculates the Maximum Hours Needed to Accumulate Missing Resources"""
+    """
+    Calculates the Maximum Hours Needed to Accumulate Missing Resources
+    :param needed_resources: The Missing Resources
+    :param production_rates: The Production Rates
+    :return: Maximum Hours Needed
+    """
     max_hours = 0.0
 
     for resource, missing_amount in needed_resources.items():
@@ -27,7 +36,11 @@ def calculate_wait_time(needed_resources: dict, production_rates: dict) -> float
     return max_hours
 
 def format_hours(total_hours: float) -> str:
-    """Formats a Floating-Point Hour Duration into Hours and Minutes"""
+    """
+    Formats a Floating-Point Hour Duration into Hours and Minutes
+    :param total_hours: Total Hours to Format
+    :return: Formatted String of Hours and Minutes
+    """
     if total_hours == float('inf'):
         return "Infinite Time (Production Rate is 0 for a Missing Resource)"
 
