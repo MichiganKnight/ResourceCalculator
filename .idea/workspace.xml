@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e73c2008-e4e5-424f-8b73-c8834b944f23" name="Changes" comment="" />
+    <list default="true" id="e73c2008-e4e5-424f-8b73-c8834b944f23" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utils.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,9 +22,71 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0438912833918546" />
+      <entry key="MS500" value="1.6179105410808825" />
+      <entry key="S2" value="2.8762329766030588" />
+      <entry key="S5" value="4.857599031490742" />
+      <entry key="S10" value="7.1840006975049295" />
+      <entry key="S30" value="10.484973595221133" />
+      <entry key="S60" value="12.02463212310302" />
+      <entry key="M2" value="13.355978076199989" />
+      <entry key="M5" value="14.674920691014682" />
+      <entry key="M10" value="15.277472868765354" />
+      <entry key="M15" value="15.503488715430263" />
+      <entry key="M30" value="15.743913346632496" />
+      <entry key="H1" value="15.86991604651909" />
+      <entry key="H2" value="15.934437088109714" />
+      <entry key="H4" value="15.96708693580707" />
+      <entry key="D1" value="15.994496092432387" />
+      <entry key="W1" value="15.999213275408046" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="0.0" />
+      <entry key="S30" value="0.0" />
+      <entry key="S60" value="0.0" />
+      <entry key="M2" value="0.0" />
+      <entry key="M5" value="0.0" />
+      <entry key="M10" value="0.0" />
+      <entry key="M15" value="0.0" />
+      <entry key="M30" value="0.0" />
+      <entry key="H1" value="0.0" />
+      <entry key="H2" value="0.0" />
+      <entry key="H4" value="0.0" />
+      <entry key="D1" value="0.0" />
+      <entry key="W1" value="0.0" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="1.0013674685207488" />
+      <entry key="MS500" value="1.6045078604753467" />
+      <entry key="S2" value="2.8480150344349675" />
+      <entry key="S5" value="4.782721767162447" />
+      <entry key="S10" value="7.090230229158163" />
+      <entry key="S30" value="10.42295746156755" />
+      <entry key="S60" value="11.987527622180057" />
+      <entry key="M2" value="13.335646033305522" />
+      <entry key="M5" value="14.666318692181859" />
+      <entry key="M10" value="15.273089379186342" />
+      <entry key="M15" value="15.500547695275309" />
+      <entry key="M30" value="15.742433393450286" />
+      <entry key="H1" value="15.869173690528019" />
+      <entry key="H2" value="15.934065312882291" />
+      <entry key="H4" value="15.966900898584141" />
+      <entry key="D1" value="15.994465065423775" />
+      <entry key="W1" value="15.999208842468397" />
+    </decayedShown>
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 1,
@@ -41,6 +105,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.jshint": "true",
@@ -67,7 +132,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1792084993775</updated>
-      <workItem from="1792084994778" duration="321000" />
+      <workItem from="1792084994778" duration="628000" />
     </task>
     <servers />
   </component>
