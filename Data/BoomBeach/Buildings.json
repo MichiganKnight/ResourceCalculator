@@ -1,5 +1,39 @@
 {
     "Headquarters": {
-        "28"
+        "1": {
+            "Gold": 0,
+            "Wood": 0,
+            "Stone": 0,
+            "Iron": 0,
+            "Time": 0.02
+        },
+        "2": {
+            "Gold": 0,
+            "Wood": 600,
+            "Stone": 0,
+            "Iron": 0,
+            "Time": 0.0008
+        },
+        "3": {
+            "Gold": 0,
+            "Wood": 1900,
+            "Stone": 0,
+            "Iron": 0,
+            "Time": 0.25
+        },
+        "4": {
+            "Gold": 0,
+            "Wood": 5900,
+            "Stone": 0,
+            "Iron": 0,
+            "Time": 0.5
+        },
+        "5": {
+            "Gold": 0,
+            "Wood": 13000,
+            "Stone": 0,
+            "Iron": 0,
+            "Time": 0.75
+        }
     }
 }

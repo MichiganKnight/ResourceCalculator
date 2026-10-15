@@ -12,7 +12,7 @@ def get_non_negative_integer(prompt: str) -> int:
         if user_input.isdigit():
             return int(user_input)
 
-        print("Invalid Input - Enter a While Number 0 or Greater")
+        print("Invalid Input - Enter a Whole Number 0 or Greater")
 
 def calculate_wait_time(needed_resources: dict, production_rates: dict) -> float:
     """

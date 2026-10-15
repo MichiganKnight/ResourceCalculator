@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e73c2008-e4e5-424f-8b73-c8834b944f23" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator_Engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator_Engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/BoomBeach/Abilities.json" beforeDir="false" afterPath="$PROJECT_DIR$/Data/BoomBeach/Abilities.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/BoomBeach/Buildings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Data/BoomBeach/Buildings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/BoomBeach/Troops.json" beforeDir="false" afterPath="$PROJECT_DIR$/Data/BoomBeach/Troops.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,61 +36,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0001577580046055" />
-      <entry key="MS500" value="1.1848500679552632" />
-      <entry key="S2" value="2.511898088626822" />
-      <entry key="S5" value="5.597937825519571" />
-      <entry key="S10" value="9.960423430745186" />
-      <entry key="S30" value="22.09990405949426" />
-      <entry key="S60" value="35.98282827479115" />
-      <entry key="M2" value="61.566453661810584" />
-      <entry key="M5" value="140.63695820953083" />
-      <entry key="M10" value="257.60418371177985" />
-      <entry key="M15" value="342.94334291126654" />
-      <entry key="M30" value="483.4555896189683" />
-      <entry key="H1" value="587.8937526847344" />
-      <entry key="H2" value="652.3700590244699" />
-      <entry key="H4" value="688.3077665988158" />
-      <entry key="D1" value="720.3500245745025" />
-      <entry key="W1" value="726.0449383967267" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0000445720857813" />
+      <entry key="S5" value="1.0181813104715107" />
+      <entry key="S10" value="1.1348380922803019" />
+      <entry key="S30" value="1.5171260905737316" />
+      <entry key="S60" value="1.9100412286278508" />
+      <entry key="M2" value="3.6687912803295526" />
+      <entry key="M5" value="22.57897488118463" />
+      <entry key="M10" value="95.67243079914964" />
+      <entry key="M15" value="188.72920917277176" />
+      <entry key="M30" value="434.69793797475853" />
+      <entry key="H1" value="707.8326563341301" />
+      <entry key="H2" value="920.6387188577902" />
+      <entry key="H4" value="1055.050447113794" />
+      <entry key="D1" value="1184.8560121027185" />
+      <entry key="W1" value="1208.932244235328" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="5.816842164959547E-70" />
-      <entry key="S2" value="9.747814600507506E-18" />
-      <entry key="S5" value="3.477456646556714E-7" />
-      <entry key="S10" value="0.0012521202366915641" />
-      <entry key="S30" value="0.3585531748797372" />
-      <entry key="S60" value="1.7372210378592012" />
-      <entry key="M2" value="4.214307364099226" />
-      <entry key="M5" value="8.086768191109666" />
-      <entry key="M10" value="11.362662646694899" />
-      <entry key="M15" value="13.40707962781815" />
-      <entry key="M30" value="16.606882113068394" />
-      <entry key="H1" value="18.932159577579224" />
-      <entry key="H2" value="20.35702100110607" />
-      <entry key="H4" value="21.148883823074943" />
-      <entry key="D1" value="21.85381423852283" />
-      <entry key="W1" value="21.979007229468024" />
+      <entry key="MS500" value="8.592320740479199E-248" />
+      <entry key="S2" value="2.4357555468267855E-62" />
+      <entry key="S5" value="3.362358628065266E-25" />
+      <entry key="S10" value="8.17234522460311E-13" />
+      <entry key="S30" value="1.4829828856071322E-4" />
+      <entry key="S60" value="0.0172348001692399" />
+      <entry key="M2" value="0.19068573225019864" />
+      <entry key="M5" value="1.0744363205367" />
+      <entry key="M10" value="3.362657619394381" />
+      <entry key="M15" value="6.22911785588766" />
+      <entry key="M30" value="13.666925757322554" />
+      <entry key="H1" value="21.67286184532733" />
+      <entry key="H2" value="27.77088790044793" />
+      <entry key="H4" value="31.573081309809456" />
+      <entry key="D1" value="35.214184794969235" />
+      <entry key="W1" value="35.88649962816232" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9527882843148262" />
-      <entry key="MS500" value="1.1734355237134793" />
-      <entry key="S2" value="2.503787734708254" />
-      <entry key="S5" value="5.555528499952599" />
-      <entry key="S10" value="9.886647406863998" />
-      <entry key="S30" value="22.365331565477792" />
-      <entry key="S60" value="37.62381158658396" />
-      <entry key="M2" value="65.68024057234531" />
-      <entry key="M5" value="148.61086398979828" />
-      <entry key="M10" value="268.8568644247671" />
-      <entry key="M15" value="356.2519935338366" />
-      <entry key="M30" value="499.9932190209872" />
-      <entry key="H1" value="606.7840217280733" />
-      <entry key="H2" value="672.7039219116731" />
-      <entry key="H4" value="709.4444588292456" />
-      <entry key="D1" value="742.2017162385205" />
-      <entry key="W1" value="748.023640104946" />
+      <entry key="MS100" value="0.9726549474122855" />
+      <entry key="MS500" value="0.9944701686732144" />
+      <entry key="S2" value="0.9986590839791083" />
+      <entry key="S5" value="1.0176017592578892" />
+      <entry key="S10" value="1.1344674415831306" />
+      <entry key="S30" value="1.517059441151485" />
+      <entry key="S60" value="1.926894716538492" />
+      <entry key="M2" value="3.857046929230006" />
+      <entry key="M5" value="23.63593221265324" />
+      <entry key="M10" value="98.99304080038414" />
+      <entry key="M15" value="194.90226496695377" />
+      <entry key="M30" value="448.3002915681309" />
+      <entry key="H1" value="729.4532384619682" />
+      <entry key="H2" value="948.3757535489881" />
+      <entry key="H4" value="1086.6041793232248" />
+      <entry key="D1" value="1220.0665835506281" />
+      <entry key="W1" value="1244.8182173971659" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
@@ -103,7 +108,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.Fetch Game Data.executor": "Run",
+    "Python.Run Resource Calculator.executor": "Run",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
@@ -120,6 +128,34 @@
     "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="Run Resource Calculator" type="PythonConfigurationType" factoryName="Python">
+      <module name="ResourceCalculator" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="G:\Various Programs\Python\ResourceCalculator\.venv" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -135,11 +171,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1792084993775</updated>
-      <workItem from="1792084994778" duration="2610000" />
+      <workItem from="1792084994778" duration="5499000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ResourceCalculator$Fetch_Game_Data.coverage" NAME="Fetch Game Data Coverage Results" MODIFIED="1792089656768" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/ResourceCalculator$Run_Resource_Calculator.coverage" NAME="Run Resource Calculator Coverage Results" MODIFIED="1792090391066" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

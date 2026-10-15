@@ -37,7 +37,7 @@ def select_upgrade_by_category(game_folder: str, specific_category: str = None) 
     Guides User Dynamically Through Item and Level Selection
     :param game_folder: The Game Folder
     :param specific_category: The Specific Category to Select from
-    :return: Tuple of Item Name and Level
+    :return: Tuple of Item Name and Level Costs/Data
     """
     if specific_category:
         selected_category = specific_category
@@ -102,35 +102,41 @@ def run_calculator_flow(game_name: str, game_folder: str, resources: list, force
     print(f"       {game_name} Calculator")
     print(f"======================================")
 
-    upgrade_costs = {}
+    upgrade_data = {}
     current_inventory = {}
     production_rates = {}
     missing_resources = {}
     target_name = "Manual Entry"
     use_manual = True
+    base_upgrade_time = 0.0
 
     target_path = os.path.join(BASE_DATA_DIR, game_folder)
     if os.path.exists(target_path):
         prompt_message = f"Load Configuration Dynamically from Registry? (Y/N): " if not forced_category else f"Load Directly from {forced_category}.json Module? (Y/N): "
         use_db = input(prompt_message).strip().lower()
         if use_db == "y":
-            target_name, upgrade_costs = select_upgrade_by_category(game_folder, forced_category)
-            if upgrade_costs:
+            target_name, upgrade_data = select_upgrade_by_category(game_folder, forced_category)
+            if upgrade_data:
                 use_manual = False
                 print(f"\nSelected Profile Target: {target_name}")
             else:
                 print("Falling Back to Manual Entry Mode")
 
+    # If loading from database, extract the upgrade duration from the dict if it exists
+    if not use_manual:
+        # Using .pop() removes "Time" from upgrade_data so it won't trigger resource calculation errors
+        base_upgrade_time = float(upgrade_data.pop("Time", 0.0))
+
     print("\n--- Step 1: Resource Requirements ---")
     for resource in resources:
         if use_manual:
-            upgrade_costs[resource] = get_non_negative_integer(f"Enter Required {resource} Amount: ")
+            upgrade_data[resource] = get_non_negative_integer(f"Enter Required {resource} Amount: ")
         else:
-            upgrade_costs[resource] = upgrade_costs.get(resource, 0)
-            print(f"Required {resource}: (Auto-Filled): {upgrade_costs[resource]:,}")
+            upgrade_data[resource] = upgrade_data.get(resource, 0)
+            print(f"Required {resource}: (Auto-Filled): {upgrade_data[resource]:,}")
 
         current_inventory[resource] = get_non_negative_integer(f"How Much {resource} Do You Have?: ")
-        missing_resources[resource] = max(0, upgrade_costs[resource] - current_inventory[resource])
+        missing_resources[resource] = max(0, upgrade_data[resource] - current_inventory[resource])
 
     print("\n--- Step 2: Hourly Production Rates ---")
     needs_farming = False
@@ -143,32 +149,38 @@ def run_calculator_flow(game_name: str, game_folder: str, resources: list, force
 
     print("\n================ TOTAL ASSESSMENT ================")
     if not use_manual:
-        print(f"Target Upgrade : {target_name}")
+        print(f"Target Upgrade  : {target_name}")
+        if base_upgrade_time > 0:
+            print(f"In-Game Build Time: {format_hours(base_upgrade_time)}")
 
     for resource in resources:
         if missing_resources[resource] > 0:
             print(f"-> Missing {resource}: {missing_resources[resource]:,}")
         else:
-            print(f"-> {resource}: Sufficient (Surplus: {current_inventory[resource] - upgrade_costs[resource]:,})")
+            print(f"-> {resource}: Sufficient (Surplus: {current_inventory[resource] - upgrade_data[resource]:,})")
 
+    # Step 3: Farming Wait Time Projections
     if needs_farming:
         base_hours_needed = calculate_wait_time(missing_resources, production_rates)
+        print(f"\nEstimated Passive Farming Wait Time: {format_hours(base_hours_needed)}")
+    else:
+        print("\n🎉 Upgrades Ready! You Possess Sufficient Stocks to Proceed Immediately.")
 
+    # Step 4: Upgrade Construction/Research Timer Projections
+    if base_upgrade_time > 0:
+        print(f"\n--- Step 4: Upgrade Timer Assessment ---")
         if allow_time_savers:
-            print(f"\n--- Step 3: Time Savers (Boom Beach) ---")
-            use_savers = input("Apply 15-Minute Time Savers to Shorten Passive Wait Times? (Y/N): ").strip().lower()
+            use_savers = input("Apply 15-Minute Time Savers to Shorten the Upgrade Build Time? (Y/N): ").strip().lower()
             if use_savers == "y":
                 num_savers = get_non_negative_integer("Enter Number of 15-Minute Time Savers to Apply: ")
                 savers_in_hours = (num_savers * 15) / 60
-                adjusted_hours_needed = max(0.0, base_hours_needed - savers_in_hours)
+                adjusted_build_time = max(0.0, base_upgrade_time - savers_in_hours)
 
-                print(f"\n--- Wait Projections ---")
+                print(f"\n--- Upgrade Build Timer Projections ---")
                 print(f"Applied {num_savers} Savers (-{savers_in_hours:.2f} Hours)")
-                print(f"Original Wait Time: {format_hours(base_hours_needed)}")
-                print(f"Adjusted Wait Time: {format_hours(adjusted_hours_needed)}")
-
-                return
-
-        print(f"\nEstimated Passive Wait Time: {format_hours(base_hours_needed)}")
-    else:
-        print("\n🎉 Upgrades Ready! You Possess Sufficient Stocks to Proceed Immediately")
+                print(f"Original Upgrade Duration : {format_hours(base_upgrade_time)}")
+                print(f"Adjusted Upgrade Duration : {format_hours(adjusted_build_time)}")
+            else:
+                print(f"Standard Upgrade Duration: {format_hours(base_upgrade_time)}")
+        else:
+            print(f"Standard Upgrade Duration: {format_hours(base_upgrade_time)}")
